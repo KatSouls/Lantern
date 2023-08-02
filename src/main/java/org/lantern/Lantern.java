@@ -22,7 +22,7 @@ public class Lantern extends JavaPlugin implements Listener {
         if (event.getBlock().getType() == Material.TORCH) {
             Block torch = event.getBlock();
             Location torchLoc = torch.getLocation();
-            Sphere Light = new Sphere(5, Material.LIGHT);
+            Sphere Light = new Sphere(5, Material.LIGHT, Material.AIR);
             Light.generateSphere(torchLoc);
         }
     }
@@ -33,7 +33,7 @@ public class Lantern extends JavaPlugin implements Listener {
         if (block.getType() == Material.TORCH) {
             Block torch = event.getBlock();
             Location torchLoc = torch.getLocation();
-            Sphere Light = new Sphere(5, Material.AIR);
+            Sphere Light = new Sphere(5, Material.AIR, Material.LIGHT);
             Light.generateSphere(torchLoc);
         }
     }

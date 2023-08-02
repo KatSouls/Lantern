@@ -4,14 +4,17 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public class Sphere {
     private final int radius;
     private final Material blockType;
+    private final Material blockTypeReplace;
 
-    public Sphere(int radius, Material blockType) {
+    public Sphere(int radius, Material blockType, Material blockTypeReplace) {
         this.radius = radius;
         this.blockType = blockType;
+        this.blockTypeReplace = blockTypeReplace;
     }
 
     public void generateSphere(Location center) {
@@ -26,7 +29,10 @@ public class Sphere {
                     Location loc = new Location(world, x, y, z);
                     if (loc.distance(center) == radius) {
                         Block block = loc.getBlock();
-                        block.setType(blockType);
+                        @NotNull Material blocktype = loc.getBlock().getType();
+                        if(blocktype == blockTypeReplace) {
+                            block.setType(blockType);
+                        }
                     }
                 }
             }
