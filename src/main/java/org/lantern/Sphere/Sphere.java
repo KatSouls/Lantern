@@ -24,7 +24,7 @@ public class Sphere {
             for (int y = cy - radius; y <= cy + radius; y++) {
                 for (int z = cz - radius; z <= cz + radius; z++) {
                     Location loc = new Location(world, x, y, z);
-                    if (loc.distance(center) <= radius) {
+                    if (loc.distance(center) == radius) {
                         Block block = loc.getBlock();
                         block.setType(blockType);
                     }
