@@ -1,0 +1,4 @@
+name: Lantern
+version: '${project.version}'
+main: org.lantern.Lantern
+api-version: 1.20
