@@ -4,9 +4,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class Sphere extends JavaPlugin {
+public class Sphere {
     private int radius;
     private Material blockType;
 
