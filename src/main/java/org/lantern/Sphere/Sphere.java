@@ -20,7 +20,6 @@ public class Sphere extends JavaPlugin {
         int cx = center.getBlockX();
         int cy = center.getBlockY();
         int cz = center.getBlockZ();
-        int ad = 123;
 
         for (int x = cx - radius; x <= cx + radius; x++) {
             for (int y = cy - radius; y <= cy + radius; y++) {
