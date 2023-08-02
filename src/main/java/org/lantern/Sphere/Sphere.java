@@ -6,8 +6,8 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 
 public class Sphere {
-    private int radius;
-    private Material blockType;
+    private final int radius;
+    private final Material blockType;
 
     public Sphere(int radius, Material blockType) {
         this.radius = radius;
